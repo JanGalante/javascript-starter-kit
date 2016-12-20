@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "description": "Starter kit for JavaScript development environment",
     "scripts": {
-        "start": "babel-node buildScripts/startMessage.js"
+        "notTprestart": "babel-node buildScripts/startMessage.js",
+        "start": "babel-node buildScripts/srcServer.js"
     },
     "author": "Jan Lundholm Galante",
     "license": "MIT",
