@@ -4,7 +4,8 @@
     "description": "Starter kit for JavaScript development environment",
     "scripts": {
         "not-praestart": "babel-node buildScripts/startMessage.js",
-        "start": "npm-run-all --parallel start-server",
+        "start": "npm-run-all --parallel security-check start-server",
+        "security-check": "nsp check",
         "start-server": "http-server src -p 3000 -o"
     },
     "author": "Jan Lundholm Galante",
