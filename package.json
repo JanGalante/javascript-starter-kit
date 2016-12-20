@@ -24,6 +24,7 @@
         "http-server": "*",
         "localtunnel": "1.8.1",
         "npm-run-all": "3.1.1",
-        "nsp": "2.6.2"
+        "nsp": "2.6.2",
+        "open": "0.0.5"
     }
 }
