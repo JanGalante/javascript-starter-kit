@@ -3,9 +3,12 @@
     "version": "1.0.0",
     "description": "Starter kit for JavaScript development environment",
     "scripts": {
-        "not-praestart": "babel-node buildScripts/startMessage.js",
-        "start": "",
-        "start-server": "http-server src -p 3000 -o"
+        "prestart": "babel-node buildScripts/startMessage.js",
+        "start": "npm-run-all --parallel security-check start-server",
+        "security-check": "nsp check",
+        "start-server": "http-server src -p 3000 -o",
+        "localtunnel": "lt --port 3000 --subdomain donquijote",
+        "share": "npm-run-all --parallel start-server localtunnel"
     },
     "author": "Jan Lundholm Galante",
     "license": "MIT",
@@ -17,6 +20,9 @@
         "babel-register": "6.16.3",
         "chalk": "1.1.3",
         "express": "4.14.0",
-        "http-server": "*"
+        "http-server": "*",
+        "localtunnel": "1.8.1",
+        "npm-run-all": "3.1.1",
+        "nsp": "2.6.2"
     }
 }
