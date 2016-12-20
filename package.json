@@ -2,7 +2,9 @@
     "name": "javascript-development-environment",
     "version": "1.0.0",
     "description": "Starter kit for JavaScript development environment",
-    "scripts": {},
+    "scripts": {
+        "start": "node buildScripts/startMessage.js"
+    },
     "author": "Jan Lundholm Galante",
     "license": "MIT",
     "devDependencies": {
