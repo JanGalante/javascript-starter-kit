@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Starter kit for JavaScript development environment",
     "scripts": {
-        "not-praestart": "babel-node buildScripts/startMessage.js",
+        "prestart": "babel-node buildScripts/startMessage.js",
         "start": "npm-run-all --parallel security-check start-server",
         "security-check": "nsp check",
         "start-server": "http-server src -p 3000 -o",
