@@ -6,6 +6,7 @@
         "prestart": "babel-node buildScripts/startMessage.js",
         "start": "npm-run-all --parallel security-check start-server",
         "security-check": "nsp check",
+        "express": "babel-node buildScripts/srcServer.js",
         "start-server": "http-server src -p 3000 -o",
         "localtunnel": "lt --port 3000 --subdomain donquijote",
         "share": "npm-run-all --parallel start-server localtunnel"
@@ -19,10 +20,18 @@
         "babel-preset-latest": "6.16.0",
         "babel-register": "6.16.3",
         "chalk": "1.1.3",
+        "css-loader": "0.25.0",
         "express": "4.14.0",
         "http-server": "*",
         "localtunnel": "1.8.1",
+        "numeral": "1.5.3",
         "npm-run-all": "3.1.1",
-        "nsp": "2.6.2"
+        "nsp": "2.6.2",
+        "open": "0.0.5",
+        "style-loader": "0.13.1",
+        "webpack": "1.13.2",
+        "webpack-dev-middleware": "1.8.4",
+        "webpack-hot-middleware": "2.13.0",
+        "webpack-md5-hash": "0.0.5"
     }
 }
