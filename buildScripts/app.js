@@ -3,10 +3,11 @@ var path = require("path");
 var express = require('express')
 var app = express()
 
+/* eslint-disable no-console */
 
 app.get('/', function (req, res) {
 //    res.send('Hello World!')
-    var fileName = req.params.name;
+    // var fileName = req.params.name;
     res.sendFile(path.join(__dirname, '../src/index.html'));
 })
 
