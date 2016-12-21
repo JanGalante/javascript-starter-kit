@@ -3,6 +3,7 @@ var path = require("path");
 var express = require('express')
 var app = express()
 
+/* eslint-disable no-console */
 
 app.get('/', function (req, res) {
 //    res.send('Hello World!')
