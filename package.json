@@ -11,7 +11,8 @@
         "lint:watch": "npm run lint -- --watch",
         "http-server": "http-server src -p 3000 -o",
         "localtunnel": "lt --port 3000 --subdomain donquijote",
-        "share": "npm-run-all --parallel start-server localtunnel"
+        "share": "npm-run-all --parallel start-server localtunnel",
+        "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\""
     },
     "author": "Jan Lundholm Galante",
     "license": "MIT",
