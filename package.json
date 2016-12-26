@@ -13,7 +13,8 @@
         "localtunnel": "lt --port 3000 --subdomain donquijote",
         "share": "npm-run-all --parallel start-server localtunnel",
         "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
-        "test:watch": "npm run test -- --watch"
+        "test:watch": "npm run test -- --watch",
+        "generate-mock-data": "babel-node buildScripts/generateMockData"
     },
     "author": "Jan Lundholm Galante",
     "license": "MIT",
