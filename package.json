@@ -35,6 +35,7 @@
         "express": "4.14.0",
         "http-server": "*",
         "jsdom": "9.8.0",
+        "json-schema-faker": "0.3.6",
         "localtunnel": "1.8.1",
         "numeral": "1.5.3",
         "npm-run-all": "3.1.1",
