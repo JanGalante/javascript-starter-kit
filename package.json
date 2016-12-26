@@ -14,7 +14,8 @@
         "share": "npm-run-all --parallel start-server localtunnel",
         "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
         "test:watch": "npm run test -- --watch",
-        "generate-mock-data": "babel-node buildScripts/generateMockData"
+        "generate-mock-data": "babel-node buildScripts/generateMockData",
+        "start-mockapi": "json-server --watch src/api/db.json --port 3001"
     },
     "author": "Jan Lundholm Galante",
     "license": "MIT",
@@ -37,6 +38,7 @@
         "http-server": "*",
         "jsdom": "9.8.0",
         "json-schema-faker": "0.3.6",
+        "json-server": "0.8.22",
         "localtunnel": "1.8.1",
         "numeral": "1.5.3",
         "npm-run-all": "3.1.1",
