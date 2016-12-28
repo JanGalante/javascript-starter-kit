@@ -1,4 +1,5 @@
 import 'whatwg-fetch'; // import polyfill for browser not supporting fetch
+import getBaseUrl from './baseUrl';
 
 //This centralized API Proxy: abstracts away the HTTP API
 //This file is a little bit like the repository pattern, but in javascript
@@ -9,8 +10,10 @@ export function getUsers() {
   return get('users');
 }
 
+const baseUrl = getBaseUrl();
+
 function get(url) {
-  return fetch(url).then(onSuccess, onError);
+  return fetch(baseUrl + url).then(onSuccess, onError);
 }
 
 function onSuccess(response) {
