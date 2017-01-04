@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import WebpackMd5Hash from 'webpack-md5-hash';
 
 export default {
   debug: true,
@@ -15,9 +16,14 @@ export default {
   output: {
     path: path.resolve(__dirname, 'dist'), //write to distribution folder
     publicPath: '/',
-    filename: '[name].js' // we can no loner use 'bundle.js' here since we generate many files dynamicly. Name tells that we want the name in the entry
+		// we can no loner use 'bundle.js' here since we generate many files dynamicly.
+		// Name tells that we want the name in the entry, chunkhash use a variable created by WebpackMd5Hash
+    filename: '[name].[chunkhash].js'
   },
   plugins: [
+		// Hash the files using MD5 so that their names change when the content changes.
+    new WebpackMd5Hash(),
+
 		// Use CommonsChunkPlugin to create a separate bundle
     // of vendor libraries so that they're cached separately.
     new webpack.optimize.CommonsChunkPlugin({
