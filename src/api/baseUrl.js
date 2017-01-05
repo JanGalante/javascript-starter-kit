@@ -1,5 +1,6 @@
 export default function getBaseUrl() {
-  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : '/';
+	const herokuUrl = 'https://nameless-shelf-77449.herokuapp.com/';
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : herokuUrl;
 }
 
 // vanailla js to get parameter from querystring
